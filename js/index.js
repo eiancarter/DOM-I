@@ -103,4 +103,6 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
+let fancyStyle = document.getElementsByClassName('top-content');
+fancyStyle.style.color = 'red';
 
