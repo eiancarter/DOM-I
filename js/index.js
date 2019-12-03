@@ -102,7 +102,14 @@ subContent[8].textContent = siteContent['footer']['copyright'];
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+//fancy styles
+const mainContent = document.querySelector('.main-content');
+mainContent.style.backgroundColor = "red";
+mainContent.style.fontSize = "25px";
+mainContent.style.color = "white";
 
-let fancyStyle = document.getElementsByClassName('top-content');
-fancyStyle.style.color = 'red';
-
+const stretchButton = document.querySelector('#cta-img');
+stretchButton.addEventListener('click', () => {
+stretchButton.style.transform = 'scale(1.5)';
+stretchButton.style.transition = 'transform 0.3s';
+});
