@@ -40,3 +40,76 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//navigation
+const navElements = document.getElementsByTagName('a');
+Array.from(navElements);
+navElements[0].textContent = siteContent['nav']['nav-item-1'];
+navElements[1].textContent = siteContent['nav']['nav-item-2'];
+navElements[2].textContent = siteContent['nav']['nav-item-3'];
+navElements[3].textContent = siteContent['nav']['nav-item-4'];
+navElements[4].textContent = siteContent['nav']['nav-item-5'];
+navElements[5].textContent = siteContent['nav']['nav-item-6'];
+
+for (let link of navElements) {
+  link.style.color = 'green';
+  link.style.textDecoration = 'none';
+}
+
+//added navigation links 
+const navigation = document.querySelector('nav');
+const newNavLink1 = document.createElement('a');
+newNavLink1.textContent = 'Peanut';
+const newNavLink2 = document.createElement('a');
+newNavLink2.textContent = 'Butter';
+
+navigation.prepend(newNavLink1);
+navigation.appendChild(newNavLink2);
+
+//top section
+const title = document.querySelector("h1");
+title.textContent = siteContent['cta']['h1'];
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+//middle section
+let subTitles = document.querySelectorAll('h4');
+subTitles[0].textContent = siteContent['main-content']['features-h4'];
+subTitles[1].textContent = siteContent['main-content']['about-h4'];
+subTitles[2].textContent = siteContent['main-content']['services-h4'];
+subTitles[3].textContent = siteContent['main-content']['product-h4'];
+subTitles[4].textContent = siteContent['main-content']['vision-h4'];
+//contact title
+subTitles[5].textContent = siteContent['contact']['contact-h4'];
+
+let subContent = document.querySelectorAll('p');
+subContent[0].textContent = siteContent['main-content']['features-content'];
+subContent[1].textContent = siteContent['main-content']['about-content'];
+subContent[2].textContent = siteContent['main-content']['services-content'];
+subContent[3].textContent = siteContent['main-content']['product-content'];
+subContent[4].textContent = siteContent['main-content']['vision-content'];
+//contact content
+subContent[5].textContent = siteContent['contact']['address'];
+subContent[6].textContent = siteContent['contact']['phone'];
+subContent[7].textContent = siteContent['contact']['email'];
+//footer content
+subContent[8].textContent = siteContent['footer']['copyright'];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//fancy styles
+const mainContent = document.querySelector('.main-content');
+mainContent.style.backgroundColor = "red";
+mainContent.style.fontSize = "25px";
+mainContent.style.color = "white";
+
+const stretchButton = document.querySelector('#cta-img');
+stretchButton.addEventListener('click', () => {
+stretchButton.style.transform = 'scale(1.5)';
+stretchButton.style.transition = 'transform 0.3s';
+});
